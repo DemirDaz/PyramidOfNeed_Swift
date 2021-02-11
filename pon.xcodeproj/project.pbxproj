@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EC0BFAF625CD9F6E002B3773 /* Zadatak.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0BFAF525CD9F6E002B3773 /* Zadatak.swift */; };
+		EC0F117625D586F100920074 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F117525D586F100920074 /* TabBar.swift */; };
+		EC0F117B25D5890800920074 /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F117A25D5890800920074 /* MainController.swift */; };
+		EC0F118025D5891700920074 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F117F25D5891700920074 /* CalendarController.swift */; };
+		EC0F118625D58BC600920074 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F118525D58BC600920074 /* TabBarController.swift */; };
+		EC0F118E25D5B66F00920074 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F118D25D5B66F00920074 /* Checkbox.swift */; };
 		EC46D0FA25CC8040008B6FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D0F925CC8040008B6FFF /* AppDelegate.swift */; };
 		EC46D0FC25CC8040008B6FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D0FB25CC8040008B6FFF /* SceneDelegate.swift */; };
 		EC46D0FE25CC8040008B6FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D0FD25CC8040008B6FFF /* ViewController.swift */; };
@@ -15,6 +21,7 @@
 		EC46D10625CC8040008B6FFF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EC46D10425CC8040008B6FFF /* LaunchScreen.storyboard */; };
 		EC46D11125CC8040008B6FFF /* ponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D11025CC8040008B6FFF /* ponTests.swift */; };
 		EC46D11C25CC8040008B6FFF /* ponUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D11B25CC8040008B6FFF /* ponUITests.swift */; };
+		EC46D13025CC8226008B6FFF /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D12F25CC8226008B6FFF /* ListController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +42,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EC0BFAF525CD9F6E002B3773 /* Zadatak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Zadatak.swift; sourceTree = "<group>"; };
+		EC0F117525D586F100920074 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		EC0F117A25D5890800920074 /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
+		EC0F117F25D5891700920074 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
+		EC0F118525D58BC600920074 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		EC0F118D25D5B66F00920074 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
 		EC46D0F625CC8040008B6FFF /* pon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC46D0F925CC8040008B6FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC46D0FB25CC8040008B6FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -49,6 +62,7 @@
 		EC46D11725CC8040008B6FFF /* ponUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ponUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC46D11B25CC8040008B6FFF /* ponUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ponUITests.swift; sourceTree = "<group>"; };
 		EC46D11D25CC8040008B6FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EC46D12F25CC8226008B6FFF /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +120,13 @@
 				EC46D10225CC8040008B6FFF /* Assets.xcassets */,
 				EC46D10425CC8040008B6FFF /* LaunchScreen.storyboard */,
 				EC46D10725CC8040008B6FFF /* Info.plist */,
+				EC46D12F25CC8226008B6FFF /* ListController.swift */,
+				EC0BFAF525CD9F6E002B3773 /* Zadatak.swift */,
+				EC0F117525D586F100920074 /* TabBar.swift */,
+				EC0F117A25D5890800920074 /* MainController.swift */,
+				EC0F117F25D5891700920074 /* CalendarController.swift */,
+				EC0F118525D58BC600920074 /* TabBarController.swift */,
+				EC0F118D25D5B66F00920074 /* Checkbox.swift */,
 			);
 			path = pon;
 			sourceTree = "<group>";
@@ -258,9 +279,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EC0F117B25D5890800920074 /* MainController.swift in Sources */,
 				EC46D0FE25CC8040008B6FFF /* ViewController.swift in Sources */,
 				EC46D0FA25CC8040008B6FFF /* AppDelegate.swift in Sources */,
+				EC0F118625D58BC600920074 /* TabBarController.swift in Sources */,
+				EC0F118E25D5B66F00920074 /* Checkbox.swift in Sources */,
 				EC46D0FC25CC8040008B6FFF /* SceneDelegate.swift in Sources */,
+				EC0BFAF625CD9F6E002B3773 /* Zadatak.swift in Sources */,
+				EC46D13025CC8226008B6FFF /* ListController.swift in Sources */,
+				EC0F118025D5891700920074 /* CalendarController.swift in Sources */,
+				EC0F117625D586F100920074 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +466,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = pon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +485,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = pon/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

@@ -1,0 +1,26 @@
+{
+  "images" : [
+    {
+      "filename" : "bar3.png",
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 88,
+          "top" : 88
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "stretch"
+        },
+        "mode" : "3-part-vertical"
+      }
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  },
+  "properties" : {
+    "auto-scaling" : "auto"
+  }
+}
