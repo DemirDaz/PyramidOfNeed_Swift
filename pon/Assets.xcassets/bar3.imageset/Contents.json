@@ -11,7 +11,21 @@
         }
       ],
       "filename" : "bar3dark.png",
-      "idiom" : "universal"
+      "idiom" : "universal",
+      "resizing" : {
+        "cap-insets" : {
+          "bottom" : 88,
+          "left" : 350,
+          "right" : 349,
+          "top" : 88
+        },
+        "center" : {
+          "height" : 1,
+          "mode" : "stretch",
+          "width" : 1
+        },
+        "mode" : "9-part"
+      }
     },
     {
       "appearances" : [
@@ -25,13 +39,16 @@
       "resizing" : {
         "cap-insets" : {
           "bottom" : 88,
+          "left" : 349,
+          "right" : 350,
           "top" : 88
         },
         "center" : {
           "height" : 1,
-          "mode" : "stretch"
+          "mode" : "stretch",
+          "width" : 1
         },
-        "mode" : "3-part-vertical"
+        "mode" : "9-part"
       }
     }
   ],

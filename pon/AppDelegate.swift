@@ -13,6 +13,23 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        /*self.window = UIWindow(frame: UIScreen.main.bounds)
+        //self.window = UIWindow(frame: UIScreen.main.bounds)
+
+            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+            
+            let preferences = UserDefaults.standard
+        if preferences.string(forKey: "now") == nil {
+        
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "onBoard")
+                self.window?.rootViewController = initialViewController
+        }
+           else {
+                let initialViewController = storyboard.instantiateViewController(withIdentifier: "mainApp")
+                self.window?.rootViewController = initialViewController
+            } */
+        
+            
         // Override point for customization after application launch.
         return true
     }

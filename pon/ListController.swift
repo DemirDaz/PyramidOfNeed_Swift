@@ -7,6 +7,7 @@
 
 import Foundation
 import UIKit
+import Lottie
 
 
 class ListController: UIViewController {
@@ -16,9 +17,10 @@ class ListController: UIViewController {
  
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var tekst: UILabel!
+    @IBOutlet var parentView: UIView!
     
     
-    
+    private var animationView: AnimationView?
     var zadaci=[String]()
     var odabrani=[String]()
     var obrisani=[String]()//vazi od paljenja do paljenja apk, koliko nam i treba
@@ -57,7 +59,15 @@ class ListController: UIViewController {
         addZadatke()
         ///ovako, UserDefaults cuva promene brisanja tek kad se aplikacija refreshuje..da bi se olaksalo, prvo proba da li moze da izbrise
         ///
-        
+        guard tableView != nil else {
+            //animationView?.removeFromSuperview()
+           
+            
+            // 6. Play animation
+            
+            
+            return print("Before View: nema tebele")
+        }
         tableView.reloadData()
         tableView.delegate = self
         tableView.dataSource = self
@@ -65,6 +75,8 @@ class ListController: UIViewController {
         
         
          if freshLaunch == true {
+           
+            
              freshLaunch = false
             self.tabBarController!.selectedIndex = 1
             //self.tabBarController!.tabBar.shadowImage = nil
@@ -107,7 +119,7 @@ class ListController: UIViewController {
             tekst.text="Current level of needs: \n self-actualization"
         }
         else if(preferences.integer(forKey: "level")==6){
-            tekst.text="Congratulations.\n You had a day of fully met needs.\n That's awesome! Here's something :"
+            tekst.text="You had a day of fully met needs.\n Keep up the good work. \n You're awesome! \n Congrats! "
         }
         
         
@@ -210,7 +222,7 @@ class ListController: UIViewController {
                     //print("nema ovog")
                     continue }
                 zadaci.append(temp)
-                print(zadaci.last)
+                //print(zadaci.last)
                // zadaciid.append(keyN)
             }
         }
@@ -263,11 +275,62 @@ class ListController: UIViewController {
             }
         }
         else if preferences.integer(forKey: "level") == 6 {
+        
             //Label i svaka cast za kraj dana
             
-        }
+            guard  tableView != nil else {
+                animationView?.removeFromSuperview()
+                animationView = .init(name: "success")
+                
+                animationView!.frame = view.bounds
+                
+                // 3. Set animation content mode
+                
+                animationView!.contentMode = .scaleAspectFit
+                
+                // 4. Set animation loop mode
+                
+                animationView!.loopMode = .loop
+                
+                // 5. Adjust animation speed
+                
+                animationView!.animationSpeed = 0.5
+                
+                parentView.addSubview(animationView!)
+                animationView!.play()
+               
+                print("Vec smo ga makli!")
+                return
+            }
+            tableView.removeFromSuperview()
+            animationView = .init(name: "success")
+            
+            animationView!.frame = view.bounds
+            
+            // 3. Set animation content mode
+            
+            animationView!.contentMode = .scaleAspectFit
+            
+            // 4. Set animation loop mode
+            
+            animationView!.loopMode = .loop
+            
+            // 5. Adjust animation speed
+            
+            animationView!.animationSpeed = 0.5
+            
+            parentView.addSubview(animationView!)
+            
+            //prikaz animacijes
+            // 2. Start AnimationView with animation name (without extension)
+            animationView!.play()
+              
         
-    }
+        }
+            
+                
+            
+            }
     
     @IBAction func updateBtn(_ sender: Any) {
         //let preferences = UserDefaults.standard
@@ -355,12 +418,14 @@ extension ListController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
         
-        cell.textLabel?.textColor = .secondaryLabel
+        cell.textLabel?.textColor = UIColor.init(named: "labelVerse")!
         
         cell.textLabel?.text = zadaci[indexPath.row]
         cell.layoutMargins.left = 40
+        let siroka = self.view.window?.screen.bounds.width;
         
-        let dugme = Checkbox(frame: CGRect(x: 330, y: 10, width: 25, height: 25))
+        let poz = siroka! - 70
+        let dugme = Checkbox(frame: CGRect(x: poz, y: 20, width: 25, height: 25))
         
         
         dugme.borderStyle = .circle
@@ -369,6 +434,7 @@ extension ListController: UITableViewDataSource {
         dugme.checkmarkStyle = .tick
         dugme.checkmarkColor = .red
         dugme.isChecked = false
+        
         //dugme.
         dugme.valueChanged = { [self] (isChecked) in
             if isChecked == true {odabrani.append("\(svi[self.zadaci[indexPath.row]] ?? "nesto")")
@@ -385,7 +451,7 @@ extension ListController: UITableViewDataSource {
         }
             
             
-        dugme.checkboxFillColor = .tertiarySystemGroupedBackground
+        dugme.checkboxFillColor = UIColor.init(named: "whibla")! //trebalo bi da nece da brejk
         cell.addSubview(dugme)
         return cell
     }

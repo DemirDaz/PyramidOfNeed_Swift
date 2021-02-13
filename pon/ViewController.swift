@@ -6,13 +6,17 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
    
     
    
+   
     @IBOutlet weak var slikada: UIImageView!
+    
+    var loged = false
   
     //override func viewWillAppear:(BOOL)animated {
        //super viewWillAppear:animated];
@@ -21,8 +25,16 @@ class ViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         let preferences = UserDefaults.standard
-        changeImage(level: preferences.integer(forKey: "level"))
-         }
+        if preferences.object(forKey: "now") == nil {
+            print("prvi put")
+        }
+        else {
+            
+            //onboardingContainer.removeFromSuperview()
+            changeImage(level: preferences.integer(forKey: "level"))
+        }
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,20 +49,11 @@ class ViewController: UIViewController {
         //let currentLevel = 0
         
         if preferences.object(forKey: "now") == nil {
-            
-            let formatter = DateFormatter()
-            let currentDateTime = Date()
-            formatter.dateFormat = "yyyy/MM/dd"
-            //formatter.dateStyle = .short
-            let date:String = formatter.string(from: currentDateTime)
-
-            ///ako je prvi put pokrenuta app
-            ///Doesn't exist //dodaj now
-            
-            preferences.set(date,forKey: "now")
             AddAllActivites()
+           //pomereno u login button
             
         } else {
+            //ako ima , promeni dan ako treba
             //ako ima now
             let upisani = preferences.string(forKey: "now")!
             let formatter = DateFormatter()
@@ -70,6 +73,10 @@ class ViewController: UIViewController {
                 RemoveAllActivites()
                 AddAllActivites()
             }
+                if preferences.integer(forKey: "prviput")==1 {
+                    AddAllActivites()
+                    preferences.setValue(0, forKey: "prviput")
+                }
                 
             }
             catch {
@@ -92,7 +99,9 @@ class ViewController: UIViewController {
                    editor.apply()
                 */
  
-
+   
+   
+    
     @IBAction func change(_ sender: Any) {
         changeImage(level: 1)
     }
