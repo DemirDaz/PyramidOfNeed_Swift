@@ -12,9 +12,9 @@
         <!--Tab Bar Controller-->
         <scene sceneID="02C-2G-oGU">
             <objects>
-                <tabBarController modalTransitionStyle="flipHorizontal" id="EaJ-BD-0zL" customClass="TabBarController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController modalTransitionStyle="crossDissolve" id="EaJ-BD-0zL" customClass="TabBarController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
                     <extendedEdge key="edgesForExtendedLayout" top="YES"/>
-                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="bar3" itemPositioning="centered" id="J85-3t-W0F">
+                    <tabBar key="tabBar" contentMode="scaleAspectFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="bar3" shadowImage="shadow" itemPositioning="centered" id="J85-3t-W0F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -41,21 +41,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67h-M9-TJM">
-                                <rect key="frame" x="179.5" y="50" width="55" height="32.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67h-M9-TJM">
+                                <rect key="frame" x="132" y="80" width="150" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Lqm-Yb-zpt"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="27"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" systemColor="secondaryLabelColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JOu-rS-fkh">
-                                <rect key="frame" x="0.0" y="143" width="414" height="610"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="fill" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="By8-m0-rDM">
+                                <rect key="frame" x="314" y="743" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="By8-m0-rDM" secondAttribute="height" multiplier="1:1" id="IT2-F4-wJ8"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="34"/>
+                                <color key="tintColor" red="1" green="0.11291385549999999" blue="0.05242053327" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" image="plus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="updateBtn:" destination="VH3-s9-d0a" eventType="touchUpInside" id="p7x-Sp-amd"/>
+                                </connections>
+                            </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JOu-rS-fkh">
+                                <rect key="frame" x="0.0" y="194" width="414" height="459"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <inset key="separatorInset" minX="30" minY="0.0" maxX="30" maxY="0.0"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="yew-YL-pcb">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="gray" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="yew-YL-pcb">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yew-YL-pcb" id="1rw-C9-h3y">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -64,22 +81,30 @@
                             </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sC5-yn-Evo"/>
-                        <color key="backgroundColor" systemColor="tertiaryLabelColor"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="By8-m0-rDM" secondAttribute="trailing" constant="20" id="0rp-SU-ugs"/>
+                            <constraint firstItem="JOu-rS-fkh" firstAttribute="leading" secondItem="sC5-yn-Evo" secondAttribute="leading" id="5Pk-78-Rpc"/>
                             <constraint firstItem="JOu-rS-fkh" firstAttribute="leading" secondItem="sac-uI-PVp" secondAttribute="leading" id="830-1L-VTI"/>
-                            <constraint firstItem="67h-M9-TJM" firstAttribute="top" secondItem="sac-uI-PVp" secondAttribute="top" constant="50" id="TJQ-Lx-gIl"/>
-                            <constraint firstItem="sC5-yn-Evo" firstAttribute="bottom" secondItem="JOu-rS-fkh" secondAttribute="bottom" constant="60" id="bPR-Hg-6Jb"/>
+                            <constraint firstItem="JOu-rS-fkh" firstAttribute="trailing" secondItem="sC5-yn-Evo" secondAttribute="trailing" id="JtH-ew-BF2"/>
+                            <constraint firstItem="By8-m0-rDM" firstAttribute="top" secondItem="JOu-rS-fkh" secondAttribute="bottom" constant="90" id="Nio-en-rsb"/>
+                            <constraint firstItem="67h-M9-TJM" firstAttribute="top" secondItem="sac-uI-PVp" secondAttribute="top" constant="80" id="TJQ-Lx-gIl"/>
                             <constraint firstAttribute="trailing" secondItem="JOu-rS-fkh" secondAttribute="trailing" id="btJ-ql-eLi"/>
                             <constraint firstItem="JOu-rS-fkh" firstAttribute="centerX" secondItem="sac-uI-PVp" secondAttribute="centerX" id="gA4-4Q-FXc"/>
-                            <constraint firstItem="JOu-rS-fkh" firstAttribute="centerY" secondItem="sac-uI-PVp" secondAttribute="centerY" id="qn1-Au-97h"/>
+                            <constraint firstItem="sC5-yn-Evo" firstAttribute="bottom" secondItem="JOu-rS-fkh" secondAttribute="bottom" constant="160" id="nMG-Ed-eGR"/>
+                            <constraint firstItem="JOu-rS-fkh" firstAttribute="top" secondItem="sC5-yn-Evo" secondAttribute="top" constant="150" id="nhq-jc-Z0q"/>
+                            <constraint firstItem="sC5-yn-Evo" firstAttribute="bottom" secondItem="JOu-rS-fkh" secondAttribute="bottom" constant="160" id="qzu-qh-n1T"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="By8-m0-rDM" secondAttribute="bottom" constant="10" id="s6T-xR-LVb"/>
                             <constraint firstItem="67h-M9-TJM" firstAttribute="centerX" secondItem="sac-uI-PVp" secondAttribute="centerX" id="wjh-gL-qoG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tasks" image="text.badge.checkmark" catalog="system" id="Wej-eq-K4s">
+                    <tabBarItem key="tabBarItem" title="Tasks" image="text.badge.checkmark.rtl" catalog="system" id="Wej-eq-K4s">
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="JOu-rS-fkh" id="qUS-ny-dnE"/>
+                        <outlet property="tekst" destination="67h-M9-TJM" id="vIp-ZB-flt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5To-la-Sni" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -90,14 +115,24 @@
         <scene sceneID="tDJ-Dy-ZNC">
             <objects>
                 <viewController id="hJr-Iq-CtK" customClass="ViewController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
-                    <imageView key="view" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inactive" id="nHo-nd-bTc">
+                    <stackView key="view" opaque="NO" contentMode="scaleToFill" axis="vertical" id="ImW-YD-LEW">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </imageView>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inactive" id="Xe5-tz-RGc">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yTE-yC-3An"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
+                    </stackView>
                     <tabBarItem key="tabBarItem" title="Home" image="star.leadinghalf.fill" catalog="system" selectedImage="star.leadinghalf.fill" id="UHj-WG-LTq">
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
+                    <connections>
+                        <outlet property="slikada" destination="Xe5-tz-RGc" id="wnG-XW-Kk9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wmi-89-o6A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -111,9 +146,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <viewLayoutGuide key="safeArea" id="yPE-mv-Myc"/>
-                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor"/>
                     </stackView>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="chart.bar" catalog="system" landscapeImage="chart.bar" selectedImage="chart.bar" id="M6j-1p-kk9"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" landscapeImage="calendar" selectedImage="calendar" id="M6j-1p-kk9"/>
                     <navigationItem key="navigationItem" id="oug-ec-Q8G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkn-8k-Shp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -123,15 +158,17 @@
     </scenes>
     <resources>
         <image name="bar3" width="700" height="177"/>
-        <image name="chart.bar" catalog="system" width="128" height="90"/>
+        <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="inactive" width="1501" height="1440"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="shadow" width="700" height="177"/>
         <image name="star.leadinghalf.fill" catalog="system" width="128" height="116"/>
-        <image name="text.badge.checkmark" catalog="system" width="128" height="109"/>
-        <systemColor name="systemGray5Color">
-            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <image name="text.badge.checkmark.rtl" catalog="system" width="128" height="109"/>
+        <systemColor name="secondaryLabelColor">
+            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
-        <systemColor name="tertiaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="tertiarySystemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
