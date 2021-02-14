@@ -42,6 +42,9 @@
 		ECED1A7E25D84FB90080FE09 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A7D25D84FB90080FE09 /* CardView.swift */; };
 		ECED1A8625D852BA0080FE09 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A8525D852BA0080FE09 /* OnboardingViewController.swift */; };
 		ECED1A8B25D86DD50080FE09 /* boardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A8A25D86DD50080FE09 /* boardingController.swift */; };
+		ECED1A9025D8992F0080FE09 /* prva.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A8F25D8992F0080FE09 /* prva.swift */; };
+		ECED1A9525D8999F0080FE09 /* druga.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A9425D8999F0080FE09 /* druga.swift */; };
+		ECED1A9D25D899A80080FE09 /* treca.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A9C25D899A80080FE09 /* treca.swift */; };
 		EF40127E15D15241BE32674C /* Pods_pon_ponUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B08C2A6DDBA162EF1F3DD168 /* Pods_pon_ponUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -111,6 +114,9 @@
 		ECED1A7D25D84FB90080FE09 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		ECED1A8525D852BA0080FE09 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		ECED1A8A25D86DD50080FE09 /* boardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boardingController.swift; sourceTree = "<group>"; };
+		ECED1A8F25D8992F0080FE09 /* prva.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = prva.swift; sourceTree = "<group>"; };
+		ECED1A9425D8999F0080FE09 /* druga.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = druga.swift; sourceTree = "<group>"; };
+		ECED1A9C25D899A80080FE09 /* treca.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = treca.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -214,6 +220,9 @@
 				EC46D10425CC8040008B6FFF /* LaunchScreen.storyboard */,
 				EC46D10725CC8040008B6FFF /* Info.plist */,
 				EC46D12F25CC8226008B6FFF /* ListController.swift */,
+				ECED1A8F25D8992F0080FE09 /* prva.swift */,
+				ECED1A9425D8999F0080FE09 /* druga.swift */,
+				ECED1A9C25D899A80080FE09 /* treca.swift */,
 				EC0F117A25D5890800920074 /* MainController.swift */,
 				EC0F117F25D5891700920074 /* CalendarController.swift */,
 				EC0F118525D58BC600920074 /* TabBarController.swift */,
@@ -501,6 +510,7 @@
 				EC0F117B25D5890800920074 /* MainController.swift in Sources */,
 				EC46D0FE25CC8040008B6FFF /* ViewController.swift in Sources */,
 				EC46D0FA25CC8040008B6FFF /* AppDelegate.swift in Sources */,
+				ECED1A9525D8999F0080FE09 /* druga.swift in Sources */,
 				EC0F118625D58BC600920074 /* TabBarController.swift in Sources */,
 				ECED1A7E25D84FB90080FE09 /* CardView.swift in Sources */,
 				EC0F118E25D5B66F00920074 /* Checkbox.swift in Sources */,
@@ -508,6 +518,8 @@
 				ECED1A8625D852BA0080FE09 /* OnboardingViewController.swift in Sources */,
 				EC46D13025CC8226008B6FFF /* ListController.swift in Sources */,
 				ECED1A8B25D86DD50080FE09 /* boardingController.swift in Sources */,
+				ECED1A9D25D899A80080FE09 /* treca.swift in Sources */,
+				ECED1A9025D8992F0080FE09 /* prva.swift in Sources */,
 				EC0F118025D5891700920074 /* CalendarController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

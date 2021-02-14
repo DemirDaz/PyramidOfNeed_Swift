@@ -8,14 +8,43 @@
 import Foundation
 import UIKit
 import Lottie
+import KDCalendar
 
 class CalendarController: UIViewController {
     
-    override func viewDidLoad() {
-      
-        super.viewDidLoad()
-       
-    }
-
     
+ 
+   
+    //fileprivate weak var calendar: FSCalendar!
+    override func viewDidAppear(_ animated: Bool) {
+        
+        super.viewDidAppear(animated)
+        
+        let today = Date()
+            }
+    override func viewDidLoad() {
+        
+        //calendar.dataSource = self
+        //view.addSubview(calendar)
+       
+        
+        super.viewDidLoad()
+        
+    }
+    
+   
+ 
+    
+}
+
+protocol CalendarViewDataSource {
+    func startDate() -> NSDate // UTC Date
+    func endDate() -> NSDate   // UTC Date
+}
+protocol CalendarViewDelegate {
+    func calendar(_ calendar : CalendarView, canSelectDate date : Date) -> Bool /* optional */
+    func calendar(_ calendar : CalendarView, didScrollToMonth date : Date) -> Void
+    func calendar(_ calendar : CalendarView, didSelectDate date : Date, withEvents events: [CalendarEvent]) -> Void
+    func calendar(_ calendar : CalendarView, didDeselectDate date : Date) -> Void /* optional */
+    func calendar(_ calendar : CalendarView, didLongPressDate date : Date, withEvents events: [CalendarEvent]?) -> Void /* optional */
 }

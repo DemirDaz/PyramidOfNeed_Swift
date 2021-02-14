@@ -40,7 +40,7 @@
         },
         "center" : {
           "height" : 1,
-          "mode" : "tile"
+          "mode" : "stretch"
         },
         "mode" : "3-part-vertical"
       }
