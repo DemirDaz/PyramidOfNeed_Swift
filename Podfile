@@ -7,7 +7,7 @@ target 'pon' do
 
   # Pods for pon
   pod 'lottie-ios'
-  pod 'KDCalendar', '~> 1.8.9'
+  pod ‘SideMenu’
 
   target 'ponTests' do
     inherit! :search_paths

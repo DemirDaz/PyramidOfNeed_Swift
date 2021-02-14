@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 import Lottie
-import KDCalendar
+
 
 class CalendarController: UIViewController {
     
@@ -51,11 +51,4 @@ class CalendarController: UIViewController {
 protocol CalendarViewDataSource {
     func startDate() -> NSDate // UTC Date
     func endDate() -> NSDate   // UTC Date
-}
-protocol CalendarViewDelegate {
-    func calendar(_ calendar : CalendarView, canSelectDate date : Date) -> Bool /* optional */
-    func calendar(_ calendar : CalendarView, didScrollToMonth date : Date) -> Void
-    func calendar(_ calendar : CalendarView, didSelectDate date : Date, withEvents events: [CalendarEvent]) -> Void
-    func calendar(_ calendar : CalendarView, didDeselectDate date : Date) -> Void /* optional */
-    func calendar(_ calendar : CalendarView, didLongPressDate date : Date, withEvents events: [CalendarEvent]?) -> Void /* optional */
 }

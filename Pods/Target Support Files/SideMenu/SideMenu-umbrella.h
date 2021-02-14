@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double KDCalendarVersionNumber;
-FOUNDATION_EXPORT const unsigned char KDCalendarVersionString[];
+FOUNDATION_EXPORT double SideMenuVersionNumber;
+FOUNDATION_EXPORT const unsigned char SideMenuVersionString[];
 

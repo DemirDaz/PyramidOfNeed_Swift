@@ -1,22 +1,20 @@
 PODS:
-  - KDCalendar (1.8.9):
-    - KDCalendar/EventManager (= 1.8.9)
-  - KDCalendar/EventManager (1.8.9)
   - lottie-ios (3.2.1)
+  - SideMenu (6.5.0)
 
 DEPENDENCIES:
-  - KDCalendar (~> 1.8.9)
   - lottie-ios
+  - SideMenu
 
 SPEC REPOS:
   trunk:
-    - KDCalendar
     - lottie-ios
+    - SideMenu
 
 SPEC CHECKSUMS:
-  KDCalendar: a587bc486b992d82ef94bd04001fce9baf45e518
   lottie-ios: 106e92eaf11fbed0a76590b4cdb9b5ec26123ff7
+  SideMenu: f583187d21c5b1dd04c72002be544b555a2627a2
 
-PODFILE CHECKSUM: 9752d7e5c3fc51294ef4b48a91d5e57146f44e1c
+PODFILE CHECKSUM: 8a3546730ee1f3133181e90a1e25af48438764c5
 
 COCOAPODS: 1.10.1
