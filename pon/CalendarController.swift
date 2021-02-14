@@ -16,11 +16,22 @@ class CalendarController: UIViewController {
  
    
     //fileprivate weak var calendar: FSCalendar!
+    var freshLaunch = true
+    
+    
     override func viewDidAppear(_ animated: Bool) {
         
         super.viewDidAppear(animated)
         
-        let today = Date()
+        if freshLaunch == true {
+          
+           
+            freshLaunch = false
+           self.tabBarController!.selectedIndex = 2
+           //self.tabBarController!.tabBar.shadowImage = nil
+           
+          
+        }
             }
     override func viewDidLoad() {
         

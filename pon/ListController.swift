@@ -74,15 +74,7 @@ class ListController: UIViewController {
         
         
         
-         if freshLaunch == true {
-           
-            
-             freshLaunch = false
-            self.tabBarController!.selectedIndex = 1
-            //self.tabBarController!.tabBar.shadowImage = nil
-            
-           
-         }
+        
     }
      
     override func viewDidLoad() {
@@ -339,67 +331,10 @@ class ListController: UIViewController {
         
         //zadaci.removeAll()
         
-        self.tabBarController!.selectedIndex = 1
+        self.tabBarController!.selectedIndex = 2
         
         
     }
-    /*var items:[String]=["prvi","drugi","treci"]
-       
-         
-        for item in items{
-            var novi = UITableViewCell()
-            var label = UILabel()
-            let dugme = Checkbox(frame: CGRect(x: 0, y: 0, width: 25, height: 25))
-           
-           // novi.addSubview(dugme)
-            //novi.alignmentRectInsets.left = 20
-            
-            
-            
-            label.backgroundColor = UIColor.yellow
-            
-            label.textAlignment = .center
-            label.text = item
-            novi.addSubview(label)
-            novi.addSubview(dugme)
-            //label.widthAnchor.constraint(equalToConstant: self.view.frame.width).isActive = true
-            //label.heightAnchor.constraint(equalToConstant: 20.0).isActive = true
-            tabl.addSubview(novi)
-            
-          
-            //novi.centerYAnchor.constraint(equalTo: listaZadataka.centerYAnchor).isActive = true
-            //novi.centerXAnchor.constraint(equalTo: listaZadataka.centerXAnchor).isActive = true
-           
-           // novi.addArrangedSubview(dugme)
-            
-            
-            /*
-            label.centerYAnchor.constraint(equalTo: novi.centerYAnchor).isActive = true
-            label.centerXAnchor.constraint(equalTo: novi.centerXAnchor).isActive = true
-            */
-            
-            //novi.addSubview(label)
-            //novi.addSubview(dugme)
-            
-            */
-            
-  
-        
-        
-        
-      
-      
-        /*for item in items {
-            var novi = Zadatak.init(frame: self.accessibilityFrame)
-            novi.zad.text=item
-            self.skrol.addSubview(novi) */
-         /* item2.imageInsets = UIEdgeInsets(top: 20, left: 0, bottom: -20, right: 0);n*/
-          
-        
-        
-        
-        
-        
         
     }
 

@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -215,10 +216,8 @@
                             <constraint firstItem="zOD-pU-SsM" firstAttribute="top" secondItem="SWi-ks-fCR" secondAttribute="bottom" constant="20" id="FMy-3S-M1w"/>
                             <constraint firstItem="SWi-ks-fCR" firstAttribute="centerX" secondItem="IZo-dc-jUy" secondAttribute="centerX" id="IeO-X5-VBL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="SWi-ks-fCR" secondAttribute="trailing" constant="50" id="MLA-DN-LNe"/>
-                            <constraint firstAttribute="trailing" secondItem="fWd-Km-NgQ" secondAttribute="trailing" constant="45" id="Wzg-dw-vJO"/>
                             <constraint firstItem="fWd-Km-NgQ" firstAttribute="top" secondItem="zOD-pU-SsM" secondAttribute="bottom" constant="8" id="ZuY-wd-KFY"/>
                             <constraint firstItem="5xx-8g-ziC" firstAttribute="centerX" secondItem="IZo-dc-jUy" secondAttribute="centerX" id="bAW-or-0sJ"/>
-                            <constraint firstItem="fWd-Km-NgQ" firstAttribute="leading" secondItem="IZo-dc-jUy" secondAttribute="leading" constant="45" id="kEO-7M-Sm0"/>
                             <constraint firstItem="5xx-8g-ziC" firstAttribute="top" secondItem="IZo-dc-jUy" secondAttribute="top" constant="170" id="w4M-a4-s2d"/>
                         </constraints>
                     </view>
@@ -232,7 +231,7 @@
             <objects>
                 <tabBarController storyboardIdentifier="mainApp" modalTransitionStyle="crossDissolve" id="EaJ-BD-0zL" customClass="TabBarController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="70B-RM-aQD"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="bar3" shadowImage="shadow" itemPositioning="centered" id="J85-3t-W0F">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" backgroundImage="bar3" shadowImage="shadow" itemPositioning="centered" itemSpacing="40" itemWidth="30" id="J85-3t-W0F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -242,9 +241,11 @@
                     </tabBar>
                     <connections>
                         <outlet property="tabBar2" destination="J85-3t-W0F" id="izL-MN-nKY"/>
-                        <segue destination="VH3-s9-d0a" kind="relationship" relationship="viewControllers" id="Xk4-Lk-bQs"/>
-                        <segue destination="hJr-Iq-CtK" kind="relationship" relationship="viewControllers" id="RKm-dq-d7i"/>
                         <segue destination="hmf-YN-ae6" kind="relationship" relationship="viewControllers" id="5HK-m9-fBK"/>
+                        <segue destination="VH3-s9-d0a" kind="relationship" relationship="viewControllers" id="iaS-ZT-ids"/>
+                        <segue destination="hJr-Iq-CtK" kind="relationship" relationship="viewControllers" id="ZW3-r7-yuL"/>
+                        <segue destination="Myy-Lt-P4E" kind="relationship" relationship="viewControllers" id="qvI-Kh-Moe"/>
+                        <segue destination="g8Q-EO-qjL" kind="relationship" relationship="viewControllers" id="aMK-mC-8al"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XtO-m4-Wm3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -317,7 +318,8 @@
                             <constraint firstItem="67h-M9-TJM" firstAttribute="centerX" secondItem="sac-uI-PVp" secondAttribute="centerX" id="wjh-gL-qoG"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Tasks" image="text.badge.checkmark.rtl" catalog="system" id="Wej-eq-K4s">
+                    <tabBarItem key="tabBarItem" title="Tasks" id="Wej-eq-K4s">
+                        <imageReference key="image" image="text.badge.checkmark.rtl" catalog="system" symbolScale="large"/>
                         <inset key="imageInsets" minX="0.0" minY="0.0" maxX="0.0" maxY="-6"/>
                     </tabBarItem>
                     <connections>
@@ -346,7 +348,8 @@
                         <viewLayoutGuide key="safeArea" id="yTE-yC-3An"/>
                         <color key="backgroundColor" name="whibla"/>
                     </stackView>
-                    <tabBarItem key="tabBarItem" title="Home" image="star.leadinghalf.fill" catalog="system" selectedImage="star.leadinghalf.fill" id="UHj-WG-LTq">
+                    <tabBarItem key="tabBarItem" title="Home" selectedImage="star.leadinghalf.fill" catalog="system" id="UHj-WG-LTq">
+                        <imageReference key="image" image="star.leadinghalf.fill" catalog="system" symbolScale="large"/>
                         <inset key="imageInsets" minX="0.0" minY="5" maxX="0.0" maxY="-5"/>
                     </tabBarItem>
                     <connections>
@@ -423,19 +426,55 @@
                             <constraint firstItem="UV4-FB-2RN" firstAttribute="top" secondItem="vfP-jC-2iQ" secondAttribute="bottom" id="znI-EE-dgA"/>
                         </constraints>
                     </stackView>
-                    <tabBarItem key="tabBarItem" title="Calendar" image="calendar" catalog="system" landscapeImage="calendar" selectedImage="calendar" id="M6j-1p-kk9"/>
+                    <tabBarItem key="tabBarItem" title="Calendar" landscapeImage="calendar" catalog="system" selectedImage="calendar" id="M6j-1p-kk9">
+                        <imageReference key="image" image="calendar" catalog="system" symbolScale="large"/>
+                    </tabBarItem>
                     <navigationItem key="navigationItem" id="oug-ec-Q8G"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wkn-8k-Shp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3457.971014492754" y="910.71428571428567"/>
         </scene>
+        <!--Friends-->
+        <scene sceneID="NPV-OI-nmM">
+            <objects>
+                <viewController id="Myy-Lt-P4E" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ahw-OM-3Y4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="RoL-ay-Csm"/>
+                        <color key="backgroundColor" name="whibla"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Friends" image="person.2.fill" catalog="system" id="WNW-yY-sG7"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pEW-TH-kuF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4176" y="910"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="rR0-lU-rMw">
+            <objects>
+                <viewController id="g8Q-EO-qjL" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ARc-9Q-VPD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="XEi-vM-tHO"/>
+                        <color key="backgroundColor" name="whibla"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="wqB-rw-jtj"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ph4-8N-Mvc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4856" y="925"/>
+        </scene>
     </scenes>
     <resources>
         <image name="bar3" width="700" height="177"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
         <image name="inactive" width="1501" height="1440"/>
         <image name="loginWhite" width="700" height="225"/>
+        <image name="person.2.fill" catalog="system" width="128" height="80"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="shadow" width="700" height="177"/>
         <image name="star.leadinghalf.fill" catalog="system" width="128" height="116"/>
