@@ -13,6 +13,7 @@
 		EC0F118025D5891700920074 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F117F25D5891700920074 /* CalendarController.swift */; };
 		EC0F118625D58BC600920074 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F118525D58BC600920074 /* TabBarController.swift */; };
 		EC0F118E25D5B66F00920074 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F118D25D5B66F00920074 /* Checkbox.swift */; };
+		EC266C7C25D9ACCF0057F198 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC266C7B25D9ACCF0057F198 /* FriendsController.swift */; };
 		EC46D0FA25CC8040008B6FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D0F925CC8040008B6FFF /* AppDelegate.swift */; };
 		EC46D0FC25CC8040008B6FFF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D0FB25CC8040008B6FFF /* SceneDelegate.swift */; };
 		EC46D0FE25CC8040008B6FFF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D0FD25CC8040008B6FFF /* ViewController.swift */; };
@@ -79,6 +80,7 @@
 		EC0F117F25D5891700920074 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		EC0F118525D58BC600920074 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EC0F118D25D5B66F00920074 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		EC266C7B25D9ACCF0057F198 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		EC46D0F625CC8040008B6FFF /* pon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC46D0F925CC8040008B6FFF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EC46D0FB25CC8040008B6FFF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -216,6 +218,7 @@
 				EC46D0FB25CC8040008B6FFF /* SceneDelegate.swift */,
 				EC46D0FD25CC8040008B6FFF /* ViewController.swift */,
 				EC46D0FF25CC8040008B6FFF /* Main.storyboard */,
+				EC266C7B25D9ACCF0057F198 /* FriendsController.swift */,
 				EC46D10225CC8040008B6FFF /* Assets.xcassets */,
 				EC46D10425CC8040008B6FFF /* LaunchScreen.storyboard */,
 				EC46D10725CC8040008B6FFF /* Info.plist */,
@@ -508,6 +511,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC0F117B25D5890800920074 /* MainController.swift in Sources */,
+				EC266C7C25D9ACCF0057F198 /* FriendsController.swift in Sources */,
 				EC46D0FE25CC8040008B6FFF /* ViewController.swift in Sources */,
 				EC46D0FA25CC8040008B6FFF /* AppDelegate.swift in Sources */,
 				ECED1A9525D8999F0080FE09 /* druga.swift in Sources */,

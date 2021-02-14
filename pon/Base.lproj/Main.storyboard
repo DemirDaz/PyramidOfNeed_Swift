@@ -422,10 +422,66 @@
                                     <segue destination="0rM-qd-bS8" kind="presentation" id="yUq-f1-AN0"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fzh-mu-d95">
+                                <rect key="frame" x="0.0" y="158" width="414" height="553"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qt5-hI-lBm">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Edit profile" image="pencil" catalog="system">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2X-nl-uNo">
+                                        <rect key="frame" x="0.0" y="92" width="414" height="92.5"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Remove friends" image="person.fill.xmark" catalog="system">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebr-mc-WhS">
+                                        <rect key="frame" x="0.0" y="184.5" width="414" height="92"/>
+                                        <fontDescription key="fontDescription" type="italicSystem" pointSize="20"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Clear data" image="clear" catalog="system">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYZ-Gq-Kri">
+                                        <rect key="frame" x="0.0" y="276.5" width="414" height="92"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F9R-9Z-boo">
+                                        <rect key="frame" x="0.0" y="368.5" width="414" height="92.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Italic" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Delete your profile" image="trash" catalog="system">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-iq-Vdb">
+                                        <rect key="frame" x="0.0" y="461" width="414" height="92"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-BoldItalic" family="Helvetica Neue" pointSize="20"/>
+                                        <color key="tintColor" name="AccentColor"/>
+                                        <state key="normal" title="Sign out" image="return" catalog="system">
+                                            <color key="titleColor" name="AccentColor"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="O1x-aC-PzF"/>
                         <color key="backgroundColor" name="whibla"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="fzh-mu-d95" secondAttribute="trailing" id="6sS-J3-xJz"/>
+                            <constraint firstItem="fzh-mu-d95" firstAttribute="top" secondItem="u05-NE-emG" secondAttribute="top" constant="158" id="70p-lB-MQI"/>
+                            <constraint firstAttribute="bottom" secondItem="fzh-mu-d95" secondAttribute="bottom" constant="185" id="8xw-f5-isz"/>
+                            <constraint firstItem="fzh-mu-d95" firstAttribute="leading" secondItem="u05-NE-emG" secondAttribute="leading" id="Fht-vZ-N9N"/>
                             <constraint firstItem="vjd-ao-j0k" firstAttribute="leading" secondItem="u05-NE-emG" secondAttribute="leading" constant="20" id="Qpx-Ps-atC"/>
                             <constraint firstItem="vjd-ao-j0k" firstAttribute="top" secondItem="u05-NE-emG" secondAttribute="top" constant="45" id="WBQ-01-LD7"/>
                         </constraints>
@@ -436,7 +492,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hzY-fz-AT3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3891" y="713"/>
+            <point key="canvasLocation" x="3889.8550724637685" y="712.5"/>
         </scene>
         <!--Item-->
         <scene sceneID="lhV-qC-0Hm">
@@ -562,7 +618,7 @@
         <!--Friends-->
         <scene sceneID="NPV-OI-nmM">
             <objects>
-                <viewController id="Myy-Lt-P4E" sceneMemberID="viewController">
+                <viewController id="Myy-Lt-P4E" customClass="FriendsController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ahw-OM-3Y4">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -581,15 +637,62 @@
                                     <segue destination="0rM-qd-bS8" kind="presentation" id="xgP-Iv-DDn"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ib-QZ-WFm">
+                                <rect key="frame" x="0.0" y="106.5" width="414" height="620.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="separatorColor" name="whiblaAccent"/>
+                                <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="NhD-PJ-iSd">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NhD-PJ-iSd" id="y7Y-Hi-E4h">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new friend (email)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8r-Cn-svJ">
+                                <rect key="frame" x="31" y="752" width="276" height="34"/>
+                                <color key="backgroundColor" name="whibla2"/>
+                                <color key="textColor" name="labelVerse"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhp-XW-Dih">
+                                <rect key="frame" x="323" y="752" width="41" height="36"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Lhp-XW-Dih" secondAttribute="height" multiplier="37:34" id="t15-nM-5OH"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" backgroundImage="person.fill.badge.plus" catalog="system">
+                                    <color key="titleColor" name="labelVerse"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RoL-ay-Csm"/>
                         <color key="backgroundColor" name="whibla"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2ib-QZ-WFm" secondAttribute="trailing" id="6Mg-Mp-bgu"/>
+                            <constraint firstAttribute="bottom" secondItem="Lhp-XW-Dih" secondAttribute="bottom" constant="109.5" id="708-0R-OM2"/>
+                            <constraint firstAttribute="bottom" secondItem="p8r-Cn-svJ" secondAttribute="bottom" constant="110" id="9k6-HI-MUr"/>
                             <constraint firstItem="MiO-P9-5kG" firstAttribute="top" secondItem="Ahw-OM-3Y4" secondAttribute="top" constant="45" id="dPB-Mt-YwT"/>
+                            <constraint firstItem="2ib-QZ-WFm" firstAttribute="leading" secondItem="Ahw-OM-3Y4" secondAttribute="leading" id="eIX-DE-hSB"/>
                             <constraint firstItem="MiO-P9-5kG" firstAttribute="leading" secondItem="Ahw-OM-3Y4" secondAttribute="leading" constant="20" id="emD-5k-x3M"/>
+                            <constraint firstItem="Lhp-XW-Dih" firstAttribute="leading" secondItem="p8r-Cn-svJ" secondAttribute="trailing" constant="18" id="kaS-vq-5m2"/>
+                            <constraint firstItem="Lhp-XW-Dih" firstAttribute="top" secondItem="2ib-QZ-WFm" secondAttribute="bottom" constant="23.5" id="pwO-2i-p0C"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Lhp-XW-Dih" secondAttribute="trailing" constant="30" id="rkY-w0-wfS"/>
+                            <constraint firstItem="2ib-QZ-WFm" firstAttribute="top" secondItem="MiO-P9-5kG" secondAttribute="bottom" constant="25" id="t5u-Ii-0Mp"/>
+                            <constraint firstItem="p8r-Cn-svJ" firstAttribute="top" secondItem="2ib-QZ-WFm" secondAttribute="bottom" constant="25" id="x7M-xK-EST"/>
+                            <constraint firstItem="p8r-Cn-svJ" firstAttribute="leading" secondItem="Ahw-OM-3Y4" secondAttribute="leading" constant="31" id="z9a-Mb-RKy"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="Friends" image="person.2.fill" catalog="system" id="WNW-yY-sG7"/>
+                    <connections>
+                        <outlet property="tableView" destination="2ib-QZ-WFm" id="QjD-7a-y5p"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pEW-TH-kuF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -688,7 +791,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kf5-6I-XZX"/>
+        <segue reference="xgP-Iv-DDn"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>
@@ -696,18 +799,24 @@
         <image name="bar3" width="700" height="177"/>
         <image name="calendar" catalog="system" width="128" height="106"/>
         <image name="circle" catalog="system" width="128" height="121"/>
+        <image name="clear" catalog="system" width="128" height="114"/>
         <image name="gear" catalog="system" width="128" height="119"/>
         <image name="house" catalog="system" width="128" height="106"/>
         <image name="inactive" width="1501" height="1440"/>
         <image name="line.horizontal.3" catalog="system" width="128" height="64"/>
         <image name="loginWhite" width="700" height="225"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person" catalog="system" width="128" height="117"/>
         <image name="person.2.fill" catalog="system" width="128" height="80"/>
+        <image name="person.fill.badge.plus" catalog="system" width="128" height="124"/>
+        <image name="person.fill.xmark" catalog="system" width="128" height="88"/>
         <image name="phone" catalog="system" width="128" height="115"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="return" catalog="system" width="128" height="101"/>
         <image name="shadow" width="700" height="177"/>
         <image name="star.leadinghalf.fill" catalog="system" width="128" height="116"/>
         <image name="text.badge.checkmark.rtl" catalog="system" width="128" height="109"/>
+        <image name="trash" catalog="system" width="121" height="128"/>
         <namedColor name="AccentColor">
             <color red="0.92100000381469727" green="0.092000000178813934" blue="0.087999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
