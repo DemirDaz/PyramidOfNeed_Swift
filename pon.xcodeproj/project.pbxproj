@@ -23,23 +23,16 @@
 		EC46D11125CC8040008B6FFF /* ponTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D11025CC8040008B6FFF /* ponTests.swift */; };
 		EC46D11C25CC8040008B6FFF /* ponUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D11B25CC8040008B6FFF /* ponUITests.swift */; };
 		EC46D13025CC8226008B6FFF /* ListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D12F25CC8226008B6FFF /* ListController.swift */; };
-		ECED1A6625D84A310080FE09 /* growthhelp.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5525D84A310080FE09 /* growthhelp.json */; };
 		ECED1A6725D84A310080FE09 /* diamond.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5625D84A310080FE09 /* diamond.json */; };
 		ECED1A6825D84A310080FE09 /* success.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5725D84A310080FE09 /* success.json */; };
 		ECED1A6925D84A310080FE09 /* loading1.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5825D84A310080FE09 /* loading1.json */; };
-		ECED1A6A25D84A310080FE09 /* growthplant.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5925D84A310080FE09 /* growthplant.json */; };
 		ECED1A6B25D84A310080FE09 /* medal.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5A25D84A310080FE09 /* medal.json */; };
-		ECED1A6C25D84A310080FE09 /* growth.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5B25D84A310080FE09 /* growth.json */; };
 		ECED1A6D25D84A310080FE09 /* checklist.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5C25D84A310080FE09 /* checklist.json */; };
 		ECED1A6E25D84A310080FE09 /* gold.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5D25D84A310080FE09 /* gold.json */; };
 		ECED1A6F25D84A310080FE09 /* happy.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5E25D84A310080FE09 /* happy.json */; };
 		ECED1A7025D84A310080FE09 /* pyramid.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A5F25D84A310080FE09 /* pyramid.json */; };
 		ECED1A7125D84A310080FE09 /* silver.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A6025D84A310080FE09 /* silver.json */; };
 		ECED1A7225D84A310080FE09 /* bronze.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A6125D84A310080FE09 /* bronze.json */; };
-		ECED1A7325D84A310080FE09 /* growth2.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A6225D84A310080FE09 /* growth2.json */; };
-		ECED1A7425D84A310080FE09 /* growth3.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A6325D84A310080FE09 /* growth3.json */; };
-		ECED1A7525D84A310080FE09 /* loading2.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A6425D84A310080FE09 /* loading2.json */; };
-		ECED1A7625D84A310080FE09 /* calendar.json in Resources */ = {isa = PBXBuildFile; fileRef = ECED1A6525D84A310080FE09 /* calendar.json */; };
 		ECED1A7E25D84FB90080FE09 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A7D25D84FB90080FE09 /* CardView.swift */; };
 		ECED1A8625D852BA0080FE09 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A8525D852BA0080FE09 /* OnboardingViewController.swift */; };
 		ECED1A8B25D86DD50080FE09 /* boardingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECED1A8A25D86DD50080FE09 /* boardingController.swift */; };
@@ -96,23 +89,16 @@
 		EC46D11B25CC8040008B6FFF /* ponUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ponUITests.swift; sourceTree = "<group>"; };
 		EC46D11D25CC8040008B6FFF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EC46D12F25CC8226008B6FFF /* ListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListController.swift; sourceTree = "<group>"; };
-		ECED1A5525D84A310080FE09 /* growthhelp.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = growthhelp.json; sourceTree = "<group>"; };
 		ECED1A5625D84A310080FE09 /* diamond.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = diamond.json; sourceTree = "<group>"; };
 		ECED1A5725D84A310080FE09 /* success.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = success.json; sourceTree = "<group>"; };
 		ECED1A5825D84A310080FE09 /* loading1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading1.json; sourceTree = "<group>"; };
-		ECED1A5925D84A310080FE09 /* growthplant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = growthplant.json; sourceTree = "<group>"; };
 		ECED1A5A25D84A310080FE09 /* medal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = medal.json; sourceTree = "<group>"; };
-		ECED1A5B25D84A310080FE09 /* growth.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = growth.json; sourceTree = "<group>"; };
 		ECED1A5C25D84A310080FE09 /* checklist.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checklist.json; sourceTree = "<group>"; };
 		ECED1A5D25D84A310080FE09 /* gold.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = gold.json; sourceTree = "<group>"; };
 		ECED1A5E25D84A310080FE09 /* happy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = happy.json; sourceTree = "<group>"; };
 		ECED1A5F25D84A310080FE09 /* pyramid.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = pyramid.json; sourceTree = "<group>"; };
 		ECED1A6025D84A310080FE09 /* silver.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = silver.json; sourceTree = "<group>"; };
 		ECED1A6125D84A310080FE09 /* bronze.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = bronze.json; sourceTree = "<group>"; };
-		ECED1A6225D84A310080FE09 /* growth2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = growth2.json; sourceTree = "<group>"; };
-		ECED1A6325D84A310080FE09 /* growth3.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = growth3.json; sourceTree = "<group>"; };
-		ECED1A6425D84A310080FE09 /* loading2.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = loading2.json; sourceTree = "<group>"; };
-		ECED1A6525D84A310080FE09 /* calendar.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = calendar.json; sourceTree = "<group>"; };
 		ECED1A7D25D84FB90080FE09 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
 		ECED1A8525D852BA0080FE09 /* OnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
 		ECED1A8A25D86DD50080FE09 /* boardingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boardingController.swift; sourceTree = "<group>"; };
@@ -198,18 +184,11 @@
 			isa = PBXGroup;
 			children = (
 				ECED1A6125D84A310080FE09 /* bronze.json */,
-				ECED1A6525D84A310080FE09 /* calendar.json */,
 				ECED1A5C25D84A310080FE09 /* checklist.json */,
 				ECED1A5625D84A310080FE09 /* diamond.json */,
 				ECED1A5D25D84A310080FE09 /* gold.json */,
-				ECED1A5B25D84A310080FE09 /* growth.json */,
-				ECED1A6225D84A310080FE09 /* growth2.json */,
-				ECED1A6325D84A310080FE09 /* growth3.json */,
-				ECED1A5525D84A310080FE09 /* growthhelp.json */,
-				ECED1A5925D84A310080FE09 /* growthplant.json */,
 				ECED1A5E25D84A310080FE09 /* happy.json */,
 				ECED1A5825D84A310080FE09 /* loading1.json */,
-				ECED1A6425D84A310080FE09 /* loading2.json */,
 				ECED1A5A25D84A310080FE09 /* medal.json */,
 				ECED1A5F25D84A310080FE09 /* pyramid.json */,
 				ECED1A6025D84A310080FE09 /* silver.json */,
@@ -370,19 +349,12 @@
 				EC46D10625CC8040008B6FFF /* LaunchScreen.storyboard in Resources */,
 				ECED1A6E25D84A310080FE09 /* gold.json in Resources */,
 				EC46D10325CC8040008B6FFF /* Assets.xcassets in Resources */,
-				ECED1A7325D84A310080FE09 /* growth2.json in Resources */,
-				ECED1A6A25D84A310080FE09 /* growthplant.json in Resources */,
 				ECED1A6725D84A310080FE09 /* diamond.json in Resources */,
-				ECED1A7425D84A310080FE09 /* growth3.json in Resources */,
 				EC46D10125CC8040008B6FFF /* Main.storyboard in Resources */,
-				ECED1A6C25D84A310080FE09 /* growth.json in Resources */,
-				ECED1A6625D84A310080FE09 /* growthhelp.json in Resources */,
 				ECED1A6825D84A310080FE09 /* success.json in Resources */,
 				ECED1A6F25D84A310080FE09 /* happy.json in Resources */,
 				ECED1A7125D84A310080FE09 /* silver.json in Resources */,
 				ECED1A6925D84A310080FE09 /* loading1.json in Resources */,
-				ECED1A7525D84A310080FE09 /* loading2.json in Resources */,
-				ECED1A7625D84A310080FE09 /* calendar.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
