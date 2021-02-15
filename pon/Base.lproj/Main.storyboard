@@ -303,7 +303,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67h-M9-TJM">
-                                <rect key="frame" x="132" y="80" width="150" height="32.5"/>
+                                <rect key="frame" x="132" y="100" width="150" height="32.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="150" id="Lqm-Yb-zpt"/>
                                 </constraints>
@@ -322,7 +322,7 @@
                             <constraint firstItem="431-I1-fMy" firstAttribute="width" secondItem="431-I1-fMy" secondAttribute="height" multiplier="60:60" constant="3.5" id="9Ow-9V-bYJ"/>
                             <constraint firstItem="JOu-rS-fkh" firstAttribute="trailing" secondItem="sC5-yn-Evo" secondAttribute="trailing" id="JtH-ew-BF2"/>
                             <constraint firstItem="By8-m0-rDM" firstAttribute="top" secondItem="JOu-rS-fkh" secondAttribute="bottom" constant="90" id="Nio-en-rsb"/>
-                            <constraint firstItem="67h-M9-TJM" firstAttribute="top" secondItem="sac-uI-PVp" secondAttribute="top" constant="80" id="TJQ-Lx-gIl"/>
+                            <constraint firstItem="67h-M9-TJM" firstAttribute="top" secondItem="sac-uI-PVp" secondAttribute="top" constant="100" id="TJQ-Lx-gIl"/>
                             <constraint firstAttribute="trailing" secondItem="JOu-rS-fkh" secondAttribute="trailing" id="btJ-ql-eLi"/>
                             <constraint firstItem="JOu-rS-fkh" firstAttribute="centerX" secondItem="sac-uI-PVp" secondAttribute="centerX" id="gA4-4Q-FXc"/>
                             <constraint firstItem="431-I1-fMy" firstAttribute="leading" secondItem="sac-uI-PVp" secondAttribute="leading" constant="20" id="jjA-Lj-YRT"/>
@@ -356,10 +356,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9q-S5-COm">
-                                <rect key="frame" x="20" y="50" width="40" height="26"/>
+                                <rect key="frame" x="20" y="50" width="40" height="30.5"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="40" id="1Wz-34-noC"/>
-                                    <constraint firstAttribute="width" secondItem="e9q-S5-COm" secondAttribute="height" multiplier="9:8" id="Ohc-iB-9LP"/>
+                                    <constraint firstAttribute="width" secondItem="e9q-S5-COm" secondAttribute="height" multiplier="9:9" id="Ohc-iB-9LP"/>
                                 </constraints>
                                 <color key="tintColor" name="AccentColor"/>
                                 <state key="normal" backgroundImage="line.horizontal.3" catalog="system">
@@ -577,7 +577,7 @@
                             </view>
                             <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="UV4-FB-2RN">
                                 <rect key="frame" x="0.0" y="84" width="414" height="376"/>
-                                <color key="tintColor" red="1" green="0.14913141730000001" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" name="AccentColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
                                 </userDefinedRuntimeAttributes>
@@ -653,10 +653,10 @@
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ib-QZ-WFm">
                                 <rect key="frame" x="0.0" y="106.5" width="414" height="620.5"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" name="whiblaAccent"/>
                                 <inset key="separatorInset" minX="20" minY="0.0" maxX="20" maxY="0.0"/>
-                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" name="whibla"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" id="NhD-PJ-iSd">
                                         <rect key="frame" x="0.0" y="28" width="414" height="60"/>
@@ -665,6 +665,8 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="60"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" name="whibla"/>
+                                        <color key="tintColor" name="AccentColor"/>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -685,13 +687,27 @@
                                     <color key="titleColor" name="labelVerse"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WOm-Z7-OV6">
+                                <rect key="frame" x="354" y="43.5" width="40" height="38"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="3qN-Zf-lFJ"/>
+                                    <constraint firstAttribute="width" secondItem="WOm-Z7-OV6" secondAttribute="height" multiplier="60:60" constant="3.5" id="9tu-T7-dHI"/>
+                                </constraints>
+                                <color key="tintColor" name="AccentColor"/>
+                                <state key="normal" backgroundImage="tray.and.arrow.down.fill" catalog="system">
+                                    <color key="titleColor" name="AccentColor"/>
+                                </state>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="RoL-ay-Csm"/>
                         <color key="backgroundColor" name="whibla"/>
                         <constraints>
+                            <constraint firstItem="WOm-Z7-OV6" firstAttribute="top" secondItem="Ahw-OM-3Y4" secondAttribute="top" constant="45" id="1Xy-PG-OuZ"/>
+                            <constraint firstAttribute="trailing" secondItem="WOm-Z7-OV6" secondAttribute="trailing" constant="20" id="31t-r1-lK9"/>
                             <constraint firstAttribute="trailing" secondItem="2ib-QZ-WFm" secondAttribute="trailing" id="6Mg-Mp-bgu"/>
                             <constraint firstAttribute="bottom" secondItem="Lhp-XW-Dih" secondAttribute="bottom" constant="109.5" id="708-0R-OM2"/>
                             <constraint firstAttribute="bottom" secondItem="p8r-Cn-svJ" secondAttribute="bottom" constant="110" id="9k6-HI-MUr"/>
+                            <constraint firstItem="WOm-Z7-OV6" firstAttribute="width" secondItem="WOm-Z7-OV6" secondAttribute="height" multiplier="60:60" constant="3.5" id="Kcu-c7-DV5"/>
                             <constraint firstItem="MiO-P9-5kG" firstAttribute="top" secondItem="Ahw-OM-3Y4" secondAttribute="top" constant="45" id="dPB-Mt-YwT"/>
                             <constraint firstItem="2ib-QZ-WFm" firstAttribute="leading" secondItem="Ahw-OM-3Y4" secondAttribute="leading" id="eIX-DE-hSB"/>
                             <constraint firstItem="MiO-P9-5kG" firstAttribute="leading" secondItem="Ahw-OM-3Y4" secondAttribute="leading" constant="20" id="emD-5k-x3M"/>
@@ -812,7 +828,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kf5-6I-XZX"/>
+        <segue reference="4rR-0L-ZKF"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>
@@ -839,6 +855,7 @@
         <image name="star.leadinghalf.fill" catalog="system" width="128" height="116"/>
         <image name="text.badge.checkmark.rtl" catalog="system" width="128" height="109"/>
         <image name="trash" catalog="system" width="121" height="128"/>
+        <image name="tray.and.arrow.down.fill" catalog="system" width="128" height="114"/>
         <namedColor name="AccentColor">
             <color red="0.92100000381469727" green="0.092000000178813934" blue="0.087999999523162842" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
