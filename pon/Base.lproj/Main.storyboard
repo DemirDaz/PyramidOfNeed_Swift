@@ -299,7 +299,7 @@
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0rM-qd-bS8" kind="presentation" id="feI-ci-27c"/>
+                                    <segue destination="0rM-qd-bS8" kind="presentation" identifier="sidemen" id="feI-ci-27c"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Opis" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="67h-M9-TJM">
@@ -352,9 +352,8 @@
         <scene sceneID="tDJ-Dy-ZNC">
             <objects>
                 <viewController id="hJr-Iq-CtK" customClass="ViewController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Rdf-LA-eoB">
+                    <view key="view" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rdf-LA-eoB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e9q-S5-COm">
                                 <rect key="frame" x="20" y="50" width="40" height="26"/>
@@ -367,12 +366,12 @@
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0rM-qd-bS8" kind="presentation" id="Kf5-6I-XZX"/>
+                                    <segue destination="0rM-qd-bS8" kind="presentation" identifier="sidemen" id="Kf5-6I-XZX"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inactive" id="Xe5-tz-RGc">
-                                <rect key="frame" x="-3" y="0.0" width="414" height="896"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" image="inactive" translatesAutoresizingMaskIntoConstraints="NO" id="Xe5-tz-RGc">
+                                <rect key="frame" x="-4" y="0.0" width="414" height="896"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="default"/>
                             </imageView>
                         </subviews>
@@ -403,7 +402,7 @@
         <!--Settings-->
         <scene sceneID="zgQ-EB-BWc">
             <objects>
-                <viewController id="VoA-jY-vMG" sceneMemberID="viewController">
+                <viewController id="VoA-jY-vMG" customClass="SettingsController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="u05-NE-emG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -419,7 +418,7 @@
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0rM-qd-bS8" kind="presentation" id="yUq-f1-AN0"/>
+                                    <segue destination="0rM-qd-bS8" kind="presentation" identifier="sidemen" id="yUq-f1-AN0"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="fzh-mu-d95">
@@ -432,6 +431,9 @@
                                         <state key="normal" title="Edit profile" image="pencil" catalog="system">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="editButton:" destination="VoA-jY-vMG" eventType="touchUpInside" id="0ex-5H-tKr"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s2X-nl-uNo">
                                         <rect key="frame" x="0.0" y="92" width="414" height="92.5"/>
@@ -440,6 +442,9 @@
                                         <state key="normal" title="Remove friends" image="person.fill.xmark" catalog="system">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="removeButton:" destination="VoA-jY-vMG" eventType="touchUpInside" id="V0F-Ke-6wc"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ebr-mc-WhS">
                                         <rect key="frame" x="0.0" y="184.5" width="414" height="92"/>
@@ -448,6 +453,9 @@
                                         <state key="normal" title="Clear data" image="clear" catalog="system">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="clearButton:" destination="VoA-jY-vMG" eventType="touchUpInside" id="SFp-2G-fLf"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KYZ-Gq-Kri">
                                         <rect key="frame" x="0.0" y="276.5" width="414" height="92"/>
@@ -462,6 +470,9 @@
                                         <state key="normal" title="Delete your profile" image="trash" catalog="system">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="deleteProfile:" destination="VoA-jY-vMG" eventType="touchUpInside" id="bco-nZ-pT5"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-iq-Vdb">
                                         <rect key="frame" x="0.0" y="461" width="414" height="92"/>
@@ -470,6 +481,9 @@
                                         <state key="normal" title="Sign out" image="return" catalog="system">
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signOut:" destination="VoA-jY-vMG" eventType="touchUpInside" id="UzZ-az-DG5"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -549,7 +563,7 @@
                                             <color key="titleColor" name="AccentColor"/>
                                         </state>
                                         <connections>
-                                            <segue destination="0rM-qd-bS8" kind="presentation" id="4rR-0L-ZKF"/>
+                                            <segue destination="0rM-qd-bS8" kind="presentation" identifier="sidemen" id="4rR-0L-ZKF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -634,7 +648,7 @@
                                     <color key="titleColor" name="AccentColor"/>
                                 </state>
                                 <connections>
-                                    <segue destination="0rM-qd-bS8" kind="presentation" id="xgP-Iv-DDn"/>
+                                    <segue destination="0rM-qd-bS8" kind="presentation" identifier="sidemen" id="xgP-Iv-DDn"/>
                                 </connections>
                             </button>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2ib-QZ-WFm">
@@ -654,12 +668,12 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new friend (email)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="p8r-Cn-svJ">
+                            <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Add new friend (email)" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="p8r-Cn-svJ">
                                 <rect key="frame" x="31" y="752" width="276" height="34"/>
                                 <color key="backgroundColor" name="whibla2"/>
                                 <color key="textColor" name="labelVerse"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" returnKeyType="done" enablesReturnKeyAutomatically="YES" smartDashesType="no" smartInsertDeleteType="no" smartQuotesType="no" textContentType="email"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lhp-XW-Dih">
                                 <rect key="frame" x="323" y="752" width="41" height="36"/>
@@ -798,7 +812,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="yUq-f1-AN0"/>
+        <segue reference="Kf5-6I-XZX"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>

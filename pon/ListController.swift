@@ -82,7 +82,7 @@ class ListController: UIViewController {
         
        // self.tabBarController!.tabBar.shadowImage = nil
         super.viewDidLoad()
-        
+        self.showSideMenu()
         
         
    

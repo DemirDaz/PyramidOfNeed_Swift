@@ -38,6 +38,8 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.showSideMenu()
+        //slikada.constraints.
                
         /*
         let someDateTime = formatter.date(from: currentDateTime)

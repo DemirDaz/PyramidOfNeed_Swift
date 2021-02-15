@@ -52,7 +52,7 @@ class treca: UIViewController{
         //prikaz animacijes
         // 2. Start AnimationView with animation name (without extension)
         animationView!.play()
-        label.text = "Svaka osoba je sposobna i ima želju da napreduje na \n hijararhiji ka nivou samoaktualizacije. Nažalost,\n napredak je  često ometen neuspehom \n u zadovoljavanju  potreba nižeg nivoa. \n\n  Ova aplikacija će vam pomoći da pratite kojih \n dana su vaše  potrebe zadovoljene, ali i koji nivoi su \n bili problematični  (oni čije potrebe nisu zadovoljene).\n Praćenjem saznajemo šta nam  konkretno nedostaje.  \n\n   „Formulacija problema je često bitnija od njegovog \n rešenja, što može biti samo stvar matematičke \n ili eksperimentalne veštine“ - Albert Ajnštajn"
+        label.text = "Svaka osoba je sposobna i ima želju da napreduje na \n hijararhiji ka nivou samoaktualizacije. Nažalost,\n napredak je  često ometen neuspehom \n u zadovoljavanju  potreba nižeg nivoa. \n\n  Ova aplikacija će vam pomoći da pratite kojih \n dana su vaše  potrebe zadovoljene, \n ali i koji nivoi su  bili problematični  \n(oni čije potrebe nisu zadovoljene).\n Praćenjem saznajemo šta nam  konkretno nedostaje.  \n\n   „Formulacija problema je često bitnija od njegovog \n rešenja, što može biti samo stvar matematičke \n ili eksperimentalne veštine“ - Albert Ajnštajn"
         super.viewDidLoad()
    
         }

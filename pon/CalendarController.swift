@@ -40,6 +40,7 @@ class CalendarController: UIViewController {
        
         
         super.viewDidLoad()
+        self.showSideMenu()
         
     }
     

@@ -45,10 +45,26 @@ override func viewDidLoad() {
     tableView.dataSource = self
    // self.tabBarController!.tabBar.shadowImage = nil
     super.viewDidLoad()
-    
+    NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+    self.hideKeyboardWhenTappedAround()
+    self.showSideMenu()
     
     
 
+    }
+    @objc func keyboardWillShow(notification: NSNotification) {
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0 {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 0 {
+            self.view.frame.origin.y = 0
+        }
     }
 }
 
@@ -93,6 +109,29 @@ extension FriendsController: UITableViewDataSource {
         return friends.count
     }
 
+}
+extension UIViewController {
+    func hideKeyboardWhenTappedAround() {
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIViewController.dismissKeyboard))
+        tap.cancelsTouchesInView = false
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func dismissKeyboard() {
+        view.endEditing(true)
+    }
+    func showSideMenu() {
+        
+
+        let rightSwipe = UISwipeGestureRecognizer(target: self, action: #selector(UIViewController.showSide))
+        rightSwipe.direction = UISwipeGestureRecognizer.Direction.right
+        view.addGestureRecognizer(rightSwipe)
+    }
+    
+    @objc func showSide() {
+        self.performSegue(withIdentifier: "sidemen", sender: nil)
+        
+    }
 }
     
     /*func FriendsController(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
