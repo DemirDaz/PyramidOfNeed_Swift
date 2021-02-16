@@ -50,7 +50,7 @@ class ListController: UIViewController {
     
     
    
-    var freshLaunch = true
+  
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -119,6 +119,7 @@ class ListController: UIViewController {
     
     func addUradjene() {
         let preferences = UserDefaults.standard
+        var novipoeni = odabrani.count
         //makni odabrane
         for i in odabrani{
             preferences.removeObject(forKey: i)
@@ -127,31 +128,74 @@ class ListController: UIViewController {
             if(intVal < 10){
                 var poeni = preferences.integer(forKey: "poeni1")
                 poeni += 1
+                //novipoeni += 1
                 preferences.setValue(poeni, forKey: "poeni1")
             }
             else if(intVal >= 10 && intVal<20){
                 var poeni = preferences.integer(forKey: "poeni2")
                 poeni += 1
+                //novipoeni += 1
                 preferences.setValue(poeni, forKey: "poeni2")
             }
             else if(intVal >= 20 && intVal<30){
                 var poeni = preferences.integer(forKey: "poeni3")
                 poeni += 1
+                //novipoeni += 1
                 preferences.setValue(poeni, forKey: "poeni3")
             }
             else if(intVal >= 30 && intVal<40){
                 var poeni = preferences.integer(forKey: "poeni4")
                 poeni += 1
+                //novipoeni += 1
                 preferences.setValue(poeni, forKey: "poeni4")
             }
             else if(intVal >= 40 && intVal<50){
                 var poeni = preferences.integer(forKey: "poeni5")
                 poeni += 1
+                //novipoeni += 1
                 preferences.setValue(poeni, forKey: "poeni5")
             }
         }
         
         setLevel(poeni1: preferences.integer(forKey: "poeni1"), poeni2: preferences.integer(forKey: "poeni2"), poeni3: preferences.integer(forKey: "poeni3"), poeni4: preferences.integer(forKey: "poeni4"), poeni5: preferences.integer(forKey: "poeni5"))
+        
+        
+        //post .. podatke u payload
+        //POST BODOVE
+        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/calendar")!
+        var request = URLRequest(url: url)
+        request.httpMethod = "POST"
+        let payload = "user=\(preferences.string(forKey:"email" ) ?? "")&date=\(preferences.string(forKey: "now") ?? "")&C1=\(preferences.integer(forKey: "poeni1"))&C2=\(preferences.integer(forKey: "poeni2"))&C3=\(preferences.integer(forKey: "poeni3"))&C4=\(preferences.integer(forKey: "poeni4"))&C5=\(preferences.integer(forKey: "poeni5"))".data(using: .utf8)!
+        let task = URLSession.shared.uploadTask(with: request, from: payload) { data, response, error in
+         
+            print(String(data: data!, encoding: .utf8) as Any)
+        }
+        task.resume()
+ 
+        let url2 = URL(string: "https://webapi20210118170049.azurewebsites.net/api/user")!
+        var request2 = URLRequest(url: url2)
+        request2.httpMethod = "POST"
+        //let payload2 = "email=sveska@live.com&password=sifra&points=3".data(using: .utf8)!
+        let payload2 = "email=\(preferences.string(forKey:"email" ) ?? "")&password=\(preferences.string(forKey:"password" ) ?? "")&points=\(novipoeni)".data(using: .utf8)!
+        let task2 = URLSession.shared.uploadTask(with: request2, from: payload2) { data, response, error in
+         
+            print(String(data: data!, encoding: .utf8) as Any)
+        }
+        task2.resume()
+        print(novipoeni)
+        print(preferences.string(forKey:"email" ) ?? "")
+        print(preferences.string(forKey:"password" ) ?? "")
+        
+        /*let url2 = URL(string: "https://webapi20210118170049.azurewebsites.net/api/user")!
+        var request2 = URLRequest(url: url2)
+        request2.httpMethod = "POST"
+        let payload2 = "email=\(preferences.string(forKey:"email") ?? "")&points=5".data(using: .utf8)!
+        let task2 = URLSession.shared.uploadTask(with: request2, from: payload2) { data, response, error in
+            
+            
+            print(String(data: data!, encoding: .utf8) as Any)
+        }
+        task2.resume() */
         
         odabrani.removeAll() //cini mi se da treba da ocistim za kraj
     }
@@ -200,12 +244,12 @@ class ListController: UIViewController {
         if preferences.integer(forKey: "level") == 0 {
             ///Lazni kod
             
-            preferences.setValue(1, forKey: "level")
+            //preferences.setValue(1, forKey: "level")
                 //zadaciid.append(keyN)
             }
         
         else if preferences.integer(forKey: "level") == 1 {
-            print("na kec sam")
+            //print("na kec sam")
             for i in 1...10 {
                 
                 var keyN = String(i)
@@ -325,8 +369,11 @@ class ListController: UIViewController {
             }
     
     @IBAction func updateBtn(_ sender: Any) {
-        //let preferences = UserDefaults.standard
-        
+        let preferences = UserDefaults.standard
+        if preferences.integer(forKey: "level") == 0
+        {
+            preferences.setValue(1, forKey: "level")
+        }
         addUradjene()
         
         //zadaci.removeAll()
@@ -374,12 +421,14 @@ extension ListController: UITableViewDataSource {
         dugme.valueChanged = { [self] (isChecked) in
             if isChecked == true {odabrani.append("\(svi[self.zadaci[indexPath.row]] ?? "nesto")")
             //print("I am checked \(isChecked). Also, my name is \(self.zadaci[indexPath.row])")
-                print(odabrani.joined(separator: ","));}
+                //print(odabrani.joined(separator: ","));
+                
+            }
             else {//odabrani.remove(at: Int(svi[self.zadaci[indexPath.row]])) Else Radi
                 //odabrani sadrzi id-ove
                 odabrani.removeAll{ $0 == "\(svi[self.zadaci[indexPath.row]] ?? "nesto")"};
                // print("I am : \(isChecked). Also, my name is \(svi[self.zadaci[indexPath.row]] ??  "neko")")
-                print(odabrani.joined(separator: ","));
+              //  print(odabrani.joined(separator: ","));
             }
        
             ///THIS IS WORKING SO GO FROM HERE UP ! bravo

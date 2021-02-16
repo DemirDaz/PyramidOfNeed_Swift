@@ -146,7 +146,7 @@
         <!--Boarding Controller-->
         <scene sceneID="Mjt-me-FVg">
             <objects>
-                <viewController storyboardIdentifier="login" id="FKG-V7-iFA" customClass="boardingController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="login" modalTransitionStyle="flipHorizontal" modalPresentationStyle="fullScreen" id="FKG-V7-iFA" customClass="boardingController" customModule="pon" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="login" id="IZo-dc-jUy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,7 +189,6 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="login:" destination="FKG-V7-iFA" eventType="touchUpInside" id="0uP-fw-1BK"/>
-                                    <segue destination="EaJ-BD-0zL" kind="presentation" modalPresentationStyle="fullScreen" modalTransitionStyle="coverVertical" id="Yyr-za-dDE"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PRIJAVA REGISTRACIJA" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5xx-8g-ziC">
@@ -221,6 +220,11 @@
                             <constraint firstItem="5xx-8g-ziC" firstAttribute="top" secondItem="IZo-dc-jUy" secondAttribute="top" constant="170" id="w4M-a4-s2d"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="pass" destination="zOD-pU-SsM" id="Esy-FD-AVQ"/>
+                        <outlet property="user" destination="SWi-ks-fCR" id="2zG-cq-tYU"/>
+                        <segue destination="EaJ-BD-0zL" kind="presentation" identifier="ulaz" modalPresentationStyle="fullScreen" modalTransitionStyle="flipHorizontal" id="LJp-wM-V0Y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tvY-X0-2oj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -828,7 +832,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="4rR-0L-ZKF"/>
+        <segue reference="feI-ci-27c"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="arrowshape.turn.up.left.circle.fill" catalog="system" width="128" height="121"/>

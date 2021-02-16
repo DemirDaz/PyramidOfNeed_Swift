@@ -21,7 +21,7 @@ class CalendarController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         
-        super.viewDidAppear(animated)
+        
         
         if freshLaunch == true {
           
@@ -32,7 +32,9 @@ class CalendarController: UIViewController {
            
           
         }
+        super.viewDidAppear(animated)
             }
+    
     override func viewDidLoad() {
         
         //calendar.dataSource = self
