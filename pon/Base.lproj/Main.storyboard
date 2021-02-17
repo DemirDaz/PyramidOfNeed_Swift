@@ -661,7 +661,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BGb-hL-xcy">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="107.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RuA-Uv-Gdg">
                                         <rect key="frame" x="20" y="50" width="45" height="32"/>
@@ -684,8 +684,8 @@
                                     <constraint firstItem="RuA-Uv-Gdg" firstAttribute="leading" secondItem="BGb-hL-xcy" secondAttribute="leading" constant="20" id="GRU-Fz-Z54"/>
                                 </constraints>
                             </view>
-                            <datePicker contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="UV4-FB-2RN">
-                                <rect key="frame" x="0.0" y="107.5" width="414" height="370"/>
+                            <datePicker contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="inline" translatesAutoresizingMaskIntoConstraints="NO" id="UV4-FB-2RN">
+                                <rect key="frame" x="0.0" y="100" width="414" height="370"/>
                                 <color key="tintColor" name="AccentColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="370" id="n4M-3e-am0"/>
@@ -694,20 +694,20 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="shadow" value="NO"/>
                                 </userDefinedRuntimeAttributes>
                             </datePicker>
-                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="HNg-Jn-hRD">
-                                <rect key="frame" x="0.0" y="477.5" width="414" height="418.5"/>
+                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="fillProportionally" spacing="60" translatesAutoresizingMaskIntoConstraints="NO" id="HNg-Jn-hRD">
+                                <rect key="frame" x="0.0" y="470" width="414" height="426"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CQy-CB-Qoj">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="24"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="24.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Problematic:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp7-Vc-sva">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="24.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="labelVerse"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tIY-ko-LfU">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="24"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="24.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
@@ -715,16 +715,16 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="CB7-9w-fgy">
-                                        <rect key="frame" x="0.0" y="124" width="414" height="24"/>
+                                        <rect key="frame" x="0.0" y="84.5" width="414" height="24.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fullfiled:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mfY-mQ-WJF">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="24"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="24.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="labelVerse"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="select Date" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1G6-3P-qFm">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="24"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="24.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                                 <color key="textColor" name="AccentColor"/>
                                                 <nil key="highlightedColor"/>
@@ -732,22 +732,22 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleAspectFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Ufa-Te-f8P">
-                                        <rect key="frame" x="0.0" y="248" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="169" width="414" height="172.5"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medal:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qqb-HQ-pLA">
-                                                <rect key="frame" x="0.0" y="0.0" width="207" height="50"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="207" height="172.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" name="labelVerse"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fYR-Wg-5fD">
-                                                <rect key="frame" x="207" y="0.0" width="207" height="50"/>
+                                                <rect key="frame" x="207" y="0.0" width="207" height="172.5"/>
                                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                             </view>
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="VELIKA SLOVA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gt7-Qe-WDN">
-                                        <rect key="frame" x="0.0" y="398" width="414" height="20.5"/>
+                                        <rect key="frame" x="0.0" y="401.5" width="414" height="24.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" name="whibla"/>
                                         <nil key="highlightedColor"/>
@@ -758,6 +758,10 @@
                         <viewLayoutGuide key="safeArea" id="pKl-jB-2xb"/>
                         <color key="backgroundColor" name="whibla"/>
                         <constraints>
+                            <constraint firstItem="UV4-FB-2RN" firstAttribute="top" secondItem="BGb-hL-xcy" secondAttribute="top" constant="100" id="58v-bn-OBU"/>
+                            <constraint firstItem="UV4-FB-2RN" firstAttribute="top" secondItem="BGb-hL-xcy" secondAttribute="bottom" id="Diq-Wh-ktf"/>
+                            <constraint firstItem="BGb-hL-xcy" firstAttribute="top" secondItem="Zb3-c6-Ej8" secondAttribute="top" id="LIS-MY-hTr"/>
+                            <constraint firstItem="UV4-FB-2RN" firstAttribute="centerX" secondItem="Zb3-c6-Ej8" secondAttribute="centerX" id="N5R-Qq-SAV"/>
                             <constraint firstAttribute="bottom" secondItem="HNg-Jn-hRD" secondAttribute="bottom" id="gQ6-1y-2ez"/>
                         </constraints>
                     </stackView>

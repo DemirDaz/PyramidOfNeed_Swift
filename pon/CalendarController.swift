@@ -61,7 +61,7 @@ class CalendarController: UIViewController {
         kalendar.addTarget(self, action: #selector(datePickerChanged(picker:)), for: .valueChanged)
     
         
-        animationView.frame = .init(x: medal.bounds.midX - 30, y: medal.bounds.midY - 30, width: 60, height: 70)
+        animationView.frame = .init(x: medal.bounds.midX - 40, y: 0, width: 60, height: 70)
         // 3. Set animation content mode
         
         animationView.contentMode = .scaleAspectFit
