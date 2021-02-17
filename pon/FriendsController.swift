@@ -16,6 +16,7 @@ var freshLaunch = true
     @IBOutlet weak var tableView: UITableView!
     var friends:[String]=["Demir Dazdarevic","Bakir Dazdarevic"]
     
+    @IBOutlet weak var trazi: UITextField!
     override func viewWillAppear(_ animated: Bool) {
     
    
@@ -38,6 +39,20 @@ var freshLaunch = true
     
     
 }
+    
+    struct User: Decodable {
+        let email: String
+        let id: Int
+        //let password: String
+        }
+    
+    struct friend: Decodable {
+        let email:String
+        let img:String
+        let points:Int
+        let fullname:String
+    }
+   
  
 override func viewDidLoad() {
     
@@ -52,6 +67,118 @@ override func viewDidLoad() {
     
     
 
+    }
+    @IBAction func search(_ sender: Any) {
+        let preferences = UserDefaults.standard
+        
+        var friend = ""
+        var result = Data()
+        var resultString = "null"
+        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/User/?email=\(trazi.text ?? "samko")")!
+        
+       
+        //SEMAFOR DA CEKA DA SE GET URADI
+        let sem = DispatchSemaphore(value: 0)
+        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
+            guard let data = data else {
+                //self.resultString = "null"
+                return }
+            
+            result = data
+            resultString = String(data: data, encoding: .utf8)!
+            print(resultString)
+            if(resultString != "null") {
+            let json = try! JSONDecoder().decode(User.self, from: result)
+                friend = "\(String(json.id)), " }
+            sem.signal()
+           
+        }
+
+        task.resume()
+        sem.wait()
+        if friend != "" {
+        let url2 = URL(string: "https://webapi20210118170049.azurewebsites.net/api/User")!
+        var request2 = URLRequest(url: url2)
+        request2.httpMethod = "POST"
+        let payload2 = "email=\(preferences.string(forKey: "email") ?? "samir")&friends=\(friend)".data(using: .utf8)!
+       
+        let task2 = URLSession.shared.uploadTask(with: request2, from: payload2) { data, response, error in
+         
+            print(String(data: data!, encoding: .utf8) as Any)
+            
+        }
+            task2.resume()
+            alertNasli()
+            
+        } else {alertNismo()}
+        
+        
+        
+        trazi.text = ""
+    }
+    func alertNasli() {
+        //POP UP poruka
+        let alert = UIAlertController(title: "Uspeh!", message: "Pronašli smo vašeg prijatelja, kada opet otvorite tab on će vam se i prikazati.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+              switch action.style{
+              case .default:
+                do{
+                    self.tabBarController!.selectedIndex = 3
+                }
+                        
+                    
+
+              case .cancel:
+                do{
+                    self.tabBarController!.selectedIndex = 3
+                }
+
+              case .destructive:
+                do{
+                    self.tabBarController!.selectedIndex = 2
+                }
+
+
+              @unknown default:
+                print("error")
+                
+                            }
+            }))
+        
+        self.present(alert, animated: true, completion: nil)
+        //ALERT DONE |||
+    }
+    func alertNismo() {
+        //POP UP poruka
+        let alert = UIAlertController(title: "Greška!", message: "Vaš prijatelj nema nalog na ovoj aplikaciji, pozovite ga da se pridruži!.", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+              switch action.style{
+              case .default:
+                do{
+                    self.trazi.text = ""
+                }
+                        
+                    
+
+              case .cancel:
+                do{
+                    self.tabBarController!.selectedIndex = 3
+                }
+
+              case .destructive:
+                do{
+                    self.tabBarController!.selectedIndex = 3
+                }
+
+
+              @unknown default:
+                print("error")
+                
+                            }
+            }))
+        
+        self.present(alert, animated: true, completion: nil)
+        //ALERT DONE |||
     }
     @objc func keyboardWillShow(notification: NSNotification) {
         if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
@@ -88,7 +215,8 @@ extension FriendsController: UITableViewDataSource {
         let poz = siroka! - 60
         let image = UIImageView(frame: CGRect(x: 20, y: 5, width: 40, height: 40))
         let boldConfig = UIImage.SymbolConfiguration(weight: .light)
-        image.image =  UIImage(systemName: "circlebadge", withConfiguration: boldConfig)
+        image.image = UIImage.init(named: "boy-1.png")
+            //UIImage(systemName: "circlebadge", withConfiguration: boldConfig)
         image.tintColor = UIColor.init(named: "labelVerse")!
        
         //let dugme = Checkbox(frame: CGRect(x: poz, y: 20, width: 25, height: 25))
@@ -96,7 +224,8 @@ extension FriendsController: UITableViewDataSource {
         cell.bringSubviewToFront(image)
         let medal = UIButton(frame: CGRect(x: poz, y: 10, width: 32, height: 40))
         medal.setBackgroundImage(UIImage(systemName: "rosette", withConfiguration: boldConfig), for: UIControl.State.normal)
-        medal.setTitle("5", for: UIControl.State.normal)
+        let broj = indexPath.row + 5
+        medal.setTitle("\(broj)", for: UIControl.State.normal)
         medal.titleEdgeInsets.top = -10
         medal.setTitleColor(UIColor.init(named: "labelVerse")!, for: UIControl.State.normal)
         cell.addSubview(medal)

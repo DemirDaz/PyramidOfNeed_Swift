@@ -119,7 +119,7 @@ class ListController: UIViewController {
     
     func addUradjene() {
         let preferences = UserDefaults.standard
-        var novipoeni = odabrani.count
+        let novipoeni = odabrani.count
         //makni odabrane
         for i in odabrani{
             preferences.removeObject(forKey: i)
@@ -172,17 +172,18 @@ class ListController: UIViewController {
         }
         task.resume()
  
-        let url2 = URL(string: "https://webapi20210118170049.azurewebsites.net/api/user")!
+        let url2 = URL(string: "https://webapi20210118170049.azurewebsites.net/api/User")!
         var request2 = URLRequest(url: url2)
         request2.httpMethod = "POST"
-        //let payload2 = "email=sveska@live.com&password=sifra&points=3".data(using: .utf8)!
-        let payload2 = "email=\(preferences.string(forKey:"email" ) ?? "")&password=\(preferences.string(forKey:"password" ) ?? "")&points=\(novipoeni)".data(using: .utf8)!
+        let payload2 = "email=\(preferences.string(forKey: "email") ?? "")&points=\(novipoeni)".data(using: .utf8)!
+        //let payload2 = "email=\(preferences.string(forKey:"email" ) ?? "")&password=\(preferences.string(forKey:"password" ) ?? "")&points=3".data(using: .utf8)!
         let task2 = URLSession.shared.uploadTask(with: request2, from: payload2) { data, response, error in
          
             print(String(data: data!, encoding: .utf8) as Any)
         }
         task2.resume()
         print(novipoeni)
+        
         print(preferences.string(forKey:"email" ) ?? "")
         print(preferences.string(forKey:"password" ) ?? "")
         

@@ -25,60 +25,127 @@ class SettingsController: UIViewController{
     
     @IBAction func editButton(_ sender: Any) {
         //get vraca json..treba da se defragmentuje..vidi Kotlin apk za taj deo.
-        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/user")!
-
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
-            print(String(data: data, encoding: .utf8)!)
-            
-        }
-
-        task.resume()
+       
     }
     
     @IBAction func removeButton(_ sender: Any) {
+        let alert = UIAlertController(title: "Soon:", message: "Coming soon!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+              switch action.style{
+              case .default:
+                do{
+                    
+                    
+                    
+                }
+                        
+                    
+
+              case .cancel:
+                do{
+                    
+                    
+                }
+
+              case .destructive:
+                do{
+                    
+                    
+                }
+
+
+              @unknown default:
+                print("error")
+                
+                            }
+            }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+
+        
         //post .. podatke u payload
-        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/user")!
-        var request = URLRequest(url: url)
-        request.httpMethod = "POST"
-        let payload = "email=demco@live.com&password=Demco123".data(using: .utf8)!
-        let task = URLSession.shared.uploadTask(with: request, from: payload) { data, response, error in
-            print(String(data: data!, encoding: .utf8))
-        }
-        task.resume()
+        
     }
     @IBAction func clearButton(_ sender: Any) {
-        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/user/?email=demco@live.com")!
-        var result = Data()
-        var resultString = String()
-
-        let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
-            guard let data = data else { return }
-            result = data
-            resultString = String(data: data, encoding: .utf8)!
-            if (resultString != "null") {
-            //onda postoji taj mejl, ili se loguje ili se registruje sa zauzetim
-             
-            // var jsoni :JSONObject = JSONObject(result)
-                print(resultString)
-                let json = try! JSONDecoder().decode(User.self, from: result)
-                print(json.password) }
-                //let userGet: [User] = try! JSONDecoder().decode([User].self, from: data)
-                //print("\(userGet[0])")
-            //print(String(data: data, encoding: .utf8)!)
-            
-        }
-
-        task.resume()
         
+        let alert = UIAlertController(title: "Obaveštenje:", message: "Svi sačuvani podaci će biti obrisani!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+              switch action.style{
+              case .default:
+                do{
+                    UserDefaults.resetStandardUserDefaults()
+                    sleep(1)
+                    exit(0)
+                    
+                    
+                }
+                        
+                    
+
+              case .cancel:
+                do{
+                    self.dismiss(animated: true, completion: nil)
+                    
+                }
+
+              case .destructive:
+                do{
+                    self.dismiss(animated: true, completion: nil)
+                    
+                }
+
+
+              @unknown default:
+                print("error")
+                
+                            }
+            }))
+        
+        self.present(alert, animated: true, completion: nil)
         
             
         
     }
     
     
-    @IBAction func deleteProfile(_ sender: Any) {
-    }
+    
     @IBAction func signOut(_ sender: Any) {
+        let alert = UIAlertController(title: "Obaveštenje:", message: "Sada ćete biti odjavljeni!", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+              switch action.style{
+              case .default:
+                do{
+                    UserDefaults.resetStandardUserDefaults()
+                    sleep(1)
+                    exit(0)
+                    
+                    
+                }
+                        
+                    
+
+              case .cancel:
+                do{
+                    self.dismiss(animated: true, completion: nil)
+                    
+                }
+
+              case .destructive:
+                do{
+                    self.dismiss(animated: true, completion: nil)
+                    
+                }
+
+
+              @unknown default:
+                print("error")
+                
+                            }
+            }))
+        
+        self.present(alert, animated: true, completion: nil)
+        
+        
     }
 }

@@ -38,7 +38,7 @@ class druga: UIViewController{
         
         // 4. Set animation loop mode
         
-        animationView!.loopMode = .loop
+        animationView!.loopMode = .autoReverse
         
         // 5. Adjust animation speed
         

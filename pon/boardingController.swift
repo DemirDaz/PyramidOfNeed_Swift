@@ -229,9 +229,11 @@ class boardingController: UIViewController{
                     if(zauzetmejl) {
                         
                         // da li je email zauzet
-                        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/user/?email=\(user.text ?? "samko")")!
+                        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/User/?email=\(user.text ?? "samko")")!
                         
-
+                       
+                        //SEMAFOR DA CEKA DA SE GET URADI
+                        let sem = DispatchSemaphore(value: 0)
                         let task = URLSession.shared.dataTask(with: url) {(data, response, error) in
                             guard let data = data else {
                                 //self.resultString = "null"
@@ -243,17 +245,18 @@ class boardingController: UIViewController{
                             if(self.resultString != "null") {
                             let json = try! JSONDecoder().decode(User.self, from: self.result)
                                 self.sifra = json.password }
+                            sem.signal()
                            
                         }
 
-                            task.resume()
-                        sleep(1)
+                        task.resume()
+                        sem.wait()
                         if (self.resultString != "null") {
                         //onda postoji taj mejl, ili se loguje ili pokusava da se registruje sa zauzetim
                          
                            
                            
-                            print("tu sam") //ovo radi prvo
+                           // print("tu sam") //ovo radi prvo
                             
                            // loginButton.text = sifra.toString()
                             if(self.pass.text == sifra) {
@@ -299,15 +302,18 @@ class boardingController: UIViewController{
                       if(!zauzetmejl) {
                         
                         //post .. podatke u payload
-                        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/user")!
+                        let url = URL(string: "https://webapi20210118170049.azurewebsites.net/api/User")!
                         var request = URLRequest(url: url)
                         request.httpMethod = "POST"
                         let payload = "email=\(self.user.text ?? "samir")&password=\(self.pass.text ?? "samir")".data(using: .utf8)!
+                       
                         let task = URLSession.shared.uploadTask(with: request, from: payload) { data, response, error in
                          
                             print(String(data: data!, encoding: .utf8) as Any)
+                            
                         }
                         task.resume()
+                        
                        
                         self.user.isHidden = true
                         self.pass.isHidden = true

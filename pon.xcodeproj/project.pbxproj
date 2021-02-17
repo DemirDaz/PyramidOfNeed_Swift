@@ -13,6 +13,8 @@
 		EC0F118025D5891700920074 /* CalendarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F117F25D5891700920074 /* CalendarController.swift */; };
 		EC0F118625D58BC600920074 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F118525D58BC600920074 /* TabBarController.swift */; };
 		EC0F118E25D5B66F00920074 /* Checkbox.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC0F118D25D5B66F00920074 /* Checkbox.swift */; };
+		EC10D8C725DC7CC9000C7D05 /* SideController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC10D8C625DC7CC9000C7D05 /* SideController.swift */; };
+		EC10D8CC25DCBDC4000C7D05 /* EditorController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC10D8CB25DCBDC4000C7D05 /* EditorController.swift */; };
 		EC266C7C25D9ACCF0057F198 /* FriendsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC266C7B25D9ACCF0057F198 /* FriendsController.swift */; };
 		EC2917E725DAAA7D00C77CAB /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC2917E625DAAA7D00C77CAB /* SettingsController.swift */; };
 		EC46D0FA25CC8040008B6FFF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EC46D0F925CC8040008B6FFF /* AppDelegate.swift */; };
@@ -74,6 +76,8 @@
 		EC0F117F25D5891700920074 /* CalendarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarController.swift; sourceTree = "<group>"; };
 		EC0F118525D58BC600920074 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		EC0F118D25D5B66F00920074 /* Checkbox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Checkbox.swift; sourceTree = "<group>"; };
+		EC10D8C625DC7CC9000C7D05 /* SideController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SideController.swift; sourceTree = "<group>"; };
+		EC10D8CB25DCBDC4000C7D05 /* EditorController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorController.swift; sourceTree = "<group>"; };
 		EC266C7B25D9ACCF0057F198 /* FriendsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsController.swift; sourceTree = "<group>"; };
 		EC2917E625DAAA7D00C77CAB /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		EC46D0F625CC8040008B6FFF /* pon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pon.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -199,6 +203,8 @@
 				EC46D0FB25CC8040008B6FFF /* SceneDelegate.swift */,
 				EC46D0FD25CC8040008B6FFF /* ViewController.swift */,
 				EC46D0FF25CC8040008B6FFF /* Main.storyboard */,
+				EC10D8CB25DCBDC4000C7D05 /* EditorController.swift */,
+				EC10D8C625DC7CC9000C7D05 /* SideController.swift */,
 				EC2917E625DAAA7D00C77CAB /* SettingsController.swift */,
 				EC266C7B25D9ACCF0057F198 /* FriendsController.swift */,
 				EC46D10225CC8040008B6FFF /* Assets.xcassets */,
@@ -486,6 +492,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EC0F117B25D5890800920074 /* MainController.swift in Sources */,
+				EC10D8C725DC7CC9000C7D05 /* SideController.swift in Sources */,
 				EC266C7C25D9ACCF0057F198 /* FriendsController.swift in Sources */,
 				EC46D0FE25CC8040008B6FFF /* ViewController.swift in Sources */,
 				EC46D0FA25CC8040008B6FFF /* AppDelegate.swift in Sources */,
@@ -494,6 +501,7 @@
 				ECED1A7E25D84FB90080FE09 /* CardView.swift in Sources */,
 				EC0F118E25D5B66F00920074 /* Checkbox.swift in Sources */,
 				EC2917E725DAAA7D00C77CAB /* SettingsController.swift in Sources */,
+				EC10D8CC25DCBDC4000C7D05 /* EditorController.swift in Sources */,
 				EC46D0FC25CC8040008B6FFF /* SceneDelegate.swift in Sources */,
 				ECED1A8625D852BA0080FE09 /* OnboardingViewController.swift in Sources */,
 				EC46D13025CC8226008B6FFF /* ListController.swift in Sources */,
